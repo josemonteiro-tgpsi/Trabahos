@@ -14,11 +14,16 @@ class Program
         dezenas = resto / 10;
         unidades = resto % 10;
 
+        if (numero > 999)
+        {
+            Console.WriteLine("[ - Erro] | O número não pode ser maior que 999.\nTem que ser entre 0 e 999.");
+        }
+
         switch (centenas)
         {
             case 1:
                 if (numero == 100) Console.WriteLine("Cem");
-                else Console.Write("Cento e ");
+                else Console.Write("Cento");
                 break;
 
             case 2: Console.Write("Duzentos"); break;
@@ -32,40 +37,7 @@ class Program
         }
 
         if ((centenas >= 1) && ((dezenas >= 1) || (unidades >= 1))) Console.Write(" e ");
-
-        switch (dezenas)
-        {
-            case 2:
-                Console.Write("Vinte");
-                break;
-            case 3: Console.Write("Trinta"); break;
-            case 4: Console.Write("Quarenta"); break;
-            case 5: Console.Write("Cinquenta"); break;
-            case 6: Console.Write("Sessenta"); break;
-            case 7: Console.Write("Setente"); break;
-            case 8: Console.Write("Oitenta"); break;
-            case 9: Console.Write("Noventa"); break;
-
-        }
-
-        if ((centenas >= 1) && ((dezenas >= 1) || (unidades >= 1))) Console.Write(" e ");
-
-        switch (unidades)
-        {  
-            case 1: Console.Write("Um"); break;
-            case 2: Console.Write("Dois"); break;
-            case 3: Console.Write("Três"); break;
-            case 4: Console.Write("Quatro"); break;
-            case 5: Console.Write("Cinco"); break;
-            case 6: Console.Write("Seis"); break;
-            case 7: Console.Write("Sete"); break;
-            case 8: Console.Write("Oito"); break;
-            case 9: Console.Write("Nove"); break;
-        }
-
-
-
-        if ((numero == 0) || ((numero >= 100) && (numero <= 999)))
+        if ((numero == 0) || ((resto >= 10) && (resto <= 19)))
         {
             switch (resto)
             {
@@ -74,46 +46,11 @@ class Program
                     Console.Write("zero");
                     break;
 
-                case 1:
-                    Console.Write("Um");
-                    break;
-
-                case 2:
-                    Console.Write("Dois");
-                    break;
-
-                case 3:
-                    Console.Write("Três");
-                    break;
-
-                case 4:
-                    Console.Write("Quatro");
-                    break;
-
-                case 5:
-                    Console.Write("Cinco");
-                    break;
-
-                case 6:
-                    Console.Write("Seis");
-                    break;
-
-                case 7:
-                    Console.Write("Sete");
-                    break;
-
-                case 8:
-                    Console.Write("Oito");
-                    break;
-
-                case 9:
-                    Console.Write("Nove");
-                    break;
 
                 case 10:
 
                     Console.Write("dez");
-                    break; 
+                    break;
 
                 case 11:
 
@@ -160,6 +97,45 @@ class Program
                     Console.Write("dezanove");
                     break;
             }
-        } 
+        }
+        else
+        {
+
+
+
+            switch (dezenas)
+            {
+                case 2:
+                    Console.Write("Vinte");
+                    break;
+                case 3: Console.Write("Trinta"); break;
+                case 4: Console.Write("Quarenta"); break;
+                case 5: Console.Write("Cinquenta"); break;
+                case 6: Console.Write("Sessenta"); break;
+                case 7: Console.Write("Setente"); break;
+                case 8: Console.Write("Oitenta"); break;
+                case 9: Console.Write("Noventa"); break;
+
+            }
+
+            if ((centenas >= 1) && ((dezenas >= 1) || (unidades >= 1))) Console.Write(" e ");
+
+            switch (unidades)
+            {
+                case 1: Console.Write("Um"); break;
+                case 2: Console.Write("Dois"); break;
+                case 3: Console.Write("Três"); break;
+                case 4: Console.Write("Quatro"); break;
+                case 5: Console.Write("Cinco"); break;
+                case 6: Console.Write("Seis"); break;
+                case 7: Console.Write("Sete"); break;
+                case 8: Console.Write("Oito"); break;
+                case 9: Console.Write("Nove"); break;
+            }
+
+        }
+
+       
+        
     }
 }
