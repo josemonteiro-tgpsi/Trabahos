@@ -11,7 +11,7 @@ namespace Programa
             const int numeroC = 365;
             int numeroE;
             Console.Write("Tenta adivinhar o numero (0-999): ");
-            numeroE = Convert.ToInt16(Console.ReadLine());
+            numeroE = rand.Next(0, 999)
 
             if (numeroE < 0 || numeroE > 999)
             {
