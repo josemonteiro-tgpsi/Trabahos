@@ -8,10 +8,10 @@ namespace Programa
     {
         static void Main()
         {
-            const int numeroC = 365;
+            const int numeroC = rand.Next(0, 999);
             int numeroE;
             Console.Write("Tenta adivinhar o numero (0-999): ");
-            numeroE = rand.Next(0, 999)
+            numeroE = Convert.ToInt16(Console.ReadLine());
 
             if (numeroE < 0 || numeroE > 999)
             {
