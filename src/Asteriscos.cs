@@ -7,16 +7,19 @@ namespace ConsoleApp1
     {
         static void Main()
         {
-            Console.Write("Numero: ");
-            int num = Convert.ToInt16(Console.ReadLine());
+            int num;
 
-            if (num < 1 || num > 40) Console.WriteLine("- erro: O numero tem que ser entre 1 e 40.");
-            else
+            do
             {
-                for (int i = 0; i < num; i++)
-                {
-                    Console.Write("*");
-                }
+                Console.Write("Numero: ");
+                num = Convert.ToInt16(Console.ReadLine());
+            } while (num < 1 || num > 40);
+            
+            
+    
+            for (int i = 0; i < num; i++)
+            {
+                Console.Write("*");
             }
         }
     }
