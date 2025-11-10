@@ -29,7 +29,7 @@ namespace Program {
 
     
       if (Mn == Ma) {
-        if (Dn <= Da) Console.Write($"A idade é {Aa - An});
+        if (Dn <= Da) Console.Write($"A idade é {Aa - An}");
       }
 
       else if (Mn >= Ma) {
