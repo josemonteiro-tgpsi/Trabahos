@@ -15,7 +15,7 @@ namespace IMC
 
             totalEmDias = 365 * idade;
 
-            Console.WriteLine($"Tens {totalEmDias} anos de vida.");
+            Console.WriteLine($"Tens {totalEmDias} dias de vida.");
 
         }
     }
